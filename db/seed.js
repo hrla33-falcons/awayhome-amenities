@@ -104,6 +104,7 @@ const createListingDetails = () => {
   listing.property = propertyHelper[randomNumber(0, propertyHelper.length - 1)]
   listing.sleeps = randomNumber(1, 10);
   listing.bedrooms = randomNumber(1, 5);
+  listing.bathrooms = randomNumber(1, 5);
   listing.halfBaths = randomNumber(0, 3);
   listing.minimumStay = randomNumber(1, 3);
   // add a random amount of amenities
