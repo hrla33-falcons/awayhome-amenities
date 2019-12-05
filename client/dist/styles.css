@@ -1,13 +1,14 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  color: grey;
 }
 
 #navbar a {
   font-weight: 300;
   font-size: 16px;
-  color: grey;
   text-decoration: none;
   display: inline-block;
+  color: grey;
   padding: 5px;
   width: 18%;
   text-align: center;

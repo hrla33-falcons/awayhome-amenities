@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const getAllListings = require('../db').getAllListings;
 
 const app = express();
 
@@ -8,7 +9,11 @@ const port = 3001;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/', express.static(path.join(__dirname, '../client/dist')))
+app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
+app.listen(port, () => console.log(`Connected to port ${port}`));
 
-app.listen(port, () => console.log(`Connected to port ${port}`))
+app.get('/listings', (req, res) => {
+  getAllListings()
+    .then((docs) => res.status(200).send(docs));
+})

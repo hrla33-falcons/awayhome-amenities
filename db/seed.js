@@ -113,10 +113,12 @@ const createListingDetails = () => {
   listing.houseRules = createHouseRules();
   // add a random amount of tags
   listing.tags = listing.houseRules; // populate tags with everything in house rules first
-  for (var i = 0; i < (1, tagCopy.length - 1); i++) {
+  var count = listing.tags.length;
+  while (count < randomNumber(listing.houseRules.length, 5)) {
     var randomIndex = randomNumber(0, tagCopy.length - 1);
     listing.tags.push(tagCopy[randomIndex]);
     tagCopy.splice(randomIndex, 1);
+    count++;
   }
 
   return listing;
