@@ -38,3 +38,8 @@ body {
   border-bottom: 1px solid lightgrey;
   margin: 20px;
 }
+
+#overview_entry {
+  margin: 15px;
+  font-size: 15px;
+}

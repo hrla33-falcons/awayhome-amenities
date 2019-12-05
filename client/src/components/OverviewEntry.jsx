@@ -2,15 +2,15 @@
 import React from 'react';
 
 const OverviewEntry = ({ listing }) => {
-  var addNight = listing.minimumStay + 1;
+  var addNight = listing.overview.minimumStay + 1;
   return (
-    <div>
-      <div>{listing.property}</div>
-      <div>Sleeps: {listing.sleeps}</div>
-      <div>Bedrooms: {listing.bedrooms}</div>
-      <div>Bathrooms: {listing.bathrooms}</div>
-      <div>Half Baths: {listing.halfBaths}</div>
-      <div>Min Stay: {listing.minimumStay}&#8211;{addNight} nights</div>
+    <div id="overview_section">
+      <div id="overview_entry">{listing.overview.propertyType}</div>
+      <div id="overview_entry">Sleeps: {listing.overview.sleeps}</div>
+      <div id="overview_entry">Bedrooms: {listing.overview.bedrooms}</div>
+      <div id="overview_entry">Bathrooms: {listing.overview.bathrooms}</div>
+      <div id="overview_entry">Half Baths: {listing.overview.halfBaths}</div>
+      <div id="overview_entry">Min Stay: {listing.overview.minimumStay}&#8211;{addNight} nights</div>
     </div>
   )
 }
