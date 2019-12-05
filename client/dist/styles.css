@@ -21,3 +21,12 @@ body {
 #navbar a:hover {
   color: black;
 }
+
+#tag {
+  font-weight: 600;
+  font-size: 11px;
+  background-color: rgb(250, 248, 248);
+  padding: 7px 10px;
+  margin: 5px;
+  border-radius: 2px;
+}

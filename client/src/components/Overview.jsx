@@ -3,19 +3,14 @@ import React from 'react';
 import OverviewEntry from './OverviewEntry.jsx';
 import OverviewTags from './OverviewTags.jsx';
 
-const Overview = () => {
+const Overview = (props) => {
   return (
     <div>
       <div>
-        <OverviewEntry />
-        <OverviewEntry />
-        <OverviewEntry />
-        <OverviewEntry />
+        <OverviewEntry listing={props.currentListing} />
       </div>
       <div>
-        <OverviewTags />
-        <OverviewTags />
-        <OverviewTags />
+        <OverviewTags listing={props.currentListing} />
       </div>
     </div>
   )
