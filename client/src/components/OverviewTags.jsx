@@ -2,11 +2,11 @@ import React from 'react';
 import TagEntry from './TagEntry.jsx';
 
 const OverviewTags = ({ listing }) => {
+  console.log(listing);
   return (
-    <div>
+    <div id="tag_section">
       {
         listing.tags.map((tag, index) => {
-          console.log('tag', tag);
           return (
             <span>
               <TagEntry tag={tag} key={index} index={index} />

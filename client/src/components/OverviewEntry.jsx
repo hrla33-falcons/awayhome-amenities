@@ -1,15 +1,16 @@
 // dynamically render icons and numbers
 import React from 'react';
 
-const OverviewEntry = (props) => {
+const OverviewEntry = ({ listing }) => {
+  var addNight = listing.minimumStay + 1;
   return (
     <div>
-      <div>House</div>
-      <div>Sleeps:</div>
-      <div>Bedrooms:</div>
-      <div>Bathrooms:</div>
-      <div>Half Baths:</div>
-      <div>Min Stay: nights</div>
+      <div>{listing.property}</div>
+      <div>Sleeps: {listing.sleeps}</div>
+      <div>Bedrooms: {listing.bedrooms}</div>
+      <div>Bathrooms: {listing.bathrooms}</div>
+      <div>Half Baths: {listing.halfBaths}</div>
+      <div>Min Stay: {listing.minimumStay}&#8211;{addNight} nights</div>
     </div>
   )
 }
