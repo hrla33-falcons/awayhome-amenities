@@ -15,10 +15,10 @@ class App extends React.Component {
     return (
       <div>
         <div id='navbar'>
-          <a href="#overview">Overview</a>
-          <a href="#amenities">Amenities</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#rates_availability">Rates & Availability</a>
+          <a href="#overview" class="underline">Overview</a>
+          <a href="#amenities" class="underline">Amenities</a>
+          <a href="#reviews" class="underline">Reviews</a>
+          <a href="#rates_availability" class="underline">Rates & Availability</a>
         </div>
         <Overview />
         <Amenities />
