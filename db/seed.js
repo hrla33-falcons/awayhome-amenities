@@ -98,15 +98,17 @@ const createHouseRules = () => {
 // create one listing's amenities/overview, etc.
 const createListingDetails = () => {
 // for each of the props in the listing doc
-  var listing = { tags: [] };
+  var listing = {};
   var tagCopy = tagHelper.slice(0);
 
-  listing.property = propertyHelper[randomNumber(0, propertyHelper.length - 1)]
-  listing.sleeps = randomNumber(1, 10);
-  listing.bedrooms = randomNumber(1, 5);
-  listing.bathrooms = randomNumber(1, 5);
-  listing.halfBaths = randomNumber(0, 3);
-  listing.minimumStay = randomNumber(1, 3);
+  listing.overview = {
+    propertyType: propertyHelper[randomNumber(0, propertyHelper.length - 1)],
+    sleeps: randomNumber(1, 10),
+    bedrooms: randomNumber(1, 5),
+    bathrooms: randomNumber(1, 5),
+    halfBaths: randomNumber(0, 3),
+    minimumStay: randomNumber(1, 3)
+  }
   // add a random amount of amenities
   listing.amenities = createAmenities();
   // add 2-3 house rules
