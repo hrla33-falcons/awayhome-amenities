@@ -1,7 +1,7 @@
 // houses all subsections of amenities
 // featured, safety features, location type, house rules, etc.
 import React from 'react';
-import AmenityEntry from './AmenityEntry.jsx';
+import AmenityEntries from './AmenityEntry.jsx';
 
 const Amenities = ({ currentListing }) => {
   return (
@@ -11,7 +11,10 @@ const Amenities = ({ currentListing }) => {
         {
           Object.keys(currentListing.amenities).map((key, index) => {
             return (
-              <h3>{key}</h3>
+              <div>
+                <h4>{key}</h4>
+                <AmenityEntries key={index} index={index} amenities={currentListing.amenities[key]}/>
+              </div>
             )
           })
         }

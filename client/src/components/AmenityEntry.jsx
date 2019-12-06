@@ -1,10 +1,20 @@
 // dynamically renders a type of subsection
 import React from 'react';
 
-const AmenityEntry = ({ listing }) => {
+const AmenityEntries = ({ amenities }) => {
   return (
-    <div>Amenity Entry</div>
+    <div>
+      {
+        amenities.map((amenity, index) => {
+          return (
+            <div key={index}>
+              {amenity}
+            </div>
+          )
+        })
+      }
+    </div>
   )
 }
 
-export default AmenityEntry;
+export default AmenityEntries;

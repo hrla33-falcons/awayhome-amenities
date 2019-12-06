@@ -1,5 +1,4 @@
 import React from 'react';
-import TagEntry from './TagEntry.jsx';
 
 const OverviewTags = ({ listing }) => {
   return (
@@ -7,8 +6,8 @@ const OverviewTags = ({ listing }) => {
       {
         listing.tags.map((tag, index) => {
           return (
-            <span>
-              <TagEntry tag={tag} key={index} index={index} />
+            <span id="tag" key={index}>
+              {tag}
             </span>
           )
         })

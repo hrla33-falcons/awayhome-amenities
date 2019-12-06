@@ -8,7 +8,7 @@ const OverviewEntry = ({ listing }) => {
       {
         Object.keys(listing.overview).map((key, index) => {
           return (
-            <div id="overview_entry">{key}: {listing.overview[key]}</div>
+            <div id="overview_entry" key={index}>{key}: {listing.overview[key]}</div>
           )
         })
       }
