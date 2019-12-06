@@ -1,7 +1,7 @@
 // houses all subsections of amenities
 // featured, safety features, location type, house rules, etc.
 import React from 'react';
-import AmenityEntries from './AmenityEntry.jsx';
+import AmenityEntries from './AmenityEntries.jsx';
 
 const Amenities = ({ currentListing }) => {
   return (

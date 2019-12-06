@@ -22,12 +22,19 @@ h4 {
 #subcat_container {
   border-bottom: 1px solid lightgrey;
   padding-bottom: 20px;
+  display: table;
+  width: 100%;
 }
 
 #amenity_entry {
   font-weight: 300;
   padding: 6px;
   margin: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
 }
 
 #navbar a {
