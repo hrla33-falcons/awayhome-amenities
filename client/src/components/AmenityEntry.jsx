@@ -7,7 +7,7 @@ const AmenityEntries = ({ amenities }) => {
       {
         amenities.map((amenity, index) => {
           return (
-            <div key={index}>
+            <div key={index} id="amenity_entry">
               {amenity}
             </div>
           )

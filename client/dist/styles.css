@@ -10,6 +10,26 @@ h2 {
   margin: 20px;
 }
 
+h4 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+#amenities_container {
+  margin: 20px;
+}
+
+#subcat_container {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 20px;
+}
+
+#amenity_entry {
+  font-weight: 300;
+  padding: 10px;
+  margin: 10px;
+}
+
 #navbar a {
   font-weight: 300;
   font-size: 16px;

@@ -7,11 +7,11 @@ const Amenities = ({ currentListing }) => {
   return (
     <div>
       <h2>Amenities</h2>
-      <div>
+      <div id="amenities_container">
         {
           Object.keys(currentListing.amenities).map((key, index) => {
             return (
-              <div>
+              <div id="subcat_container">
                 <h4>{key}</h4>
                 <AmenityEntries key={index} index={index} amenities={currentListing.amenities[key]}/>
               </div>
