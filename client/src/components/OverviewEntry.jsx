@@ -2,7 +2,6 @@
 import React from 'react';
 
 const OverviewEntry = ({ listing }) => {
-  var addNight = listing.overview['Min Stay'] + 1;
   return (
     <div id="overview_section">
       <div id="overview_entry">{listing.propertyType}</div>
