@@ -30,17 +30,17 @@ const db = require('./index.js');
 
 const propertyHelper = ['Cabin', 'House', 'Condo/Apartment', 'Bungalow', 'Cottage', 'Studio', 'Villa', 'Resort']
 const amenitiesHelper = {
-  featured: ['Pets allowed', 'Children allowed', 'Internet', 'No Smoking', 'Washer & Dryer', 'Satellite/Cable', 'Fireplace', 'Heater', 'Swimming Pool', 'Parking', 'TV', 'Hot Tub', 'Air Conditioning'],
-  safetyFeatures: ['Smoke detector', 'Exterior lighting', 'Carbon-monoxide detector', 'Fire extinguisher', 'Deadbolt lock'],
-  locationType: ['Beach View', 'Ocean View', 'Lakefront', 'Lake View', 'Mountain View', 'Downtown'],
-  general: ['Air Conditioning', 'Heating', 'Linens Provided', 'Washing Machine', 'Clothes Dryer',
+  "Featured": ['Pets allowed', 'Children allowed', 'Internet', 'No Smoking', 'Washer & Dryer', 'Satellite/Cable', 'Fireplace', 'Heater', 'Swimming Pool', 'Parking', 'TV', 'Hot Tub', 'Air Conditioning'],
+  "Safety Features": ['Smoke detector', 'Exterior lighting', 'Carbon-monoxide detector', 'Fire extinguisher', 'Deadbolt lock'],
+  "Location Type": ['Beach View', 'Ocean View', 'Lakefront', 'Lake View', 'Mountain View', 'Downtown'],
+  "General": ['Air Conditioning', 'Heating', 'Linens Provided', 'Washing Machine', 'Clothes Dryer',
     'Parking', 'Internet', 'Towels Provided', 'Iron & Board', 'Hair Dryer', 'Elevator', 'Living Room',
     'Fireplace', 'Garage', 'Telephone'],
-  kitchen: ['Dishwasher', 'Microwave', 'Stove', 'Grill', 'Coffee Maker', 'Toaster', 'Ice Maker', 'Dishes & Utensils', 'Refrigerator', 'Oven', 'Pantry Items'],
-  dining: ['Child\'s Highchair', 'Dining Area', 'Dining'],
-  entertainment: ['Television', 'Games', 'Pool Table', 'Darts', 'Satellite/Cable', 'DVD Player', 'Books', 'Toys', 'Ping Pong Table', 'Video Library'],
-  outside: ['Lawn/Garden', 'Balcony', 'Deck/Patio', 'Kayak/Canoe', 'Ski & Snowboard', 'Tennis', 'Golf', 'Bicycles', 'Water Sports Gear', 'Hiking Gear'],
-  poolSpa: ['Pool', 'Indoor Pool', 'Hot Tub']
+  "Kitchen": ['Dishwasher', 'Microwave', 'Stove', 'Grill', 'Coffee Maker', 'Toaster', 'Ice Maker', 'Dishes & Utensils', 'Refrigerator', 'Oven', 'Pantry Items'],
+  "Dining": ['Child\'s Highchair', 'Dining Area', 'Dining'],
+  "Entertainment": ['Television', 'Games', 'Pool Table', 'Darts', 'Satellite/Cable', 'DVD Player', 'Books', 'Toys', 'Ping Pong Table', 'Video Library'],
+  "Outside": ['Lawn/Garden', 'Balcony', 'Deck/Patio', 'Kayak/Canoe', 'Ski & Snowboard', 'Tennis', 'Golf', 'Bicycles', 'Water Sports Gear', 'Hiking Gear'],
+  "Pool/Spa": ['Pool', 'Indoor Pool', 'Hot Tub']
 }
 const houseRulesHelper = {
   negative: ['No children', 'No pets', 'No parties/events', 'No smoking'],
@@ -71,6 +71,7 @@ const createAmenities = () => {
   }
   return listingAmenities
 }
+createAmenities();
 
 const createHouseRules = () => {
   // result house rules should be a max of 4
@@ -100,14 +101,15 @@ const createListingDetails = () => {
 // for each of the props in the listing doc
   var listing = {};
   var tagCopy = tagHelper.slice(0);
+  var minNights = randomNumber(1, 2)
 
   listing.overview = {
-    propertyType: propertyHelper[randomNumber(0, propertyHelper.length - 1)],
-    sleeps: randomNumber(1, 10),
-    bedrooms: randomNumber(1, 5),
-    bathrooms: randomNumber(1, 5),
-    halfBaths: randomNumber(0, 3),
-    minimumStay: randomNumber(1, 3)
+    "Property Type": propertyHelper[randomNumber(0, propertyHelper.length - 1)],
+    "Sleeps": randomNumber(1, 10),
+    "Bedrooms": randomNumber(1, 5),
+    "Bathrooms": randomNumber(1, 5),
+    "Half Baths": randomNumber(0, 3),
+    "Min Stay": minNights.toString() + '\u2013' + (minNights + 1).toString() + ' nights'
   }
   // add a random amount of amenities
   listing.amenities = createAmenities();

@@ -7,23 +7,23 @@ connection.once('open', () => console.log("MongoDB connected successfully"));
 
 let listingDetailsSchema = mongoose.Schema({
   overview: {
-    propertyType: String,
-    sleeps: Number,
-    bedrooms: Number,
-    bathrooms: Number,
-    halfBaths: Number,
-    minimumStay: Number,
+    "Property Type": String,
+    "Sleeps": Number,
+    "Bedrooms": Number,
+    "Bathrooms": Number,
+    "Half Baths": Number,
+    "Min Stay": String,
   },
   amenities: {
-    featured: [String],
-    safetyFeatures: [String],
-    locationType: [String],
-    general: [String],
-    kitchen: [String],
-    dining: [String],
-    entertainment: [String],
-    outside: [String],
-    poolSpa: [String]
+    "Featured": [String],
+    "Safety Features": [String],
+    "Location Type": [String],
+    "General": [String],
+    "Kitchen": [String],
+    "Dining": [String],
+    "Entertainment": [String],
+    "Outside": [String],
+    "Pool/Spa": [String]
   },
   houseRules: [String],
   tags: [String],
