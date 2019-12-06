@@ -1,9 +1,9 @@
 // dynamically renders a type of subsection
 import React from 'react';
 
-const AmenityEntry = () => {
+const AmenityEntry = ({ listing }) => {
   return (
-    <div>Amenity Subsection</div>
+    <div>Amenity Entry</div>
   )
 }
 

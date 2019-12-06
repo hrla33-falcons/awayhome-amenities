@@ -2,7 +2,6 @@ import React from 'react';
 import TagEntry from './TagEntry.jsx';
 
 const OverviewTags = ({ listing }) => {
-  console.log(listing);
   return (
     <div id="tag_section">
       {

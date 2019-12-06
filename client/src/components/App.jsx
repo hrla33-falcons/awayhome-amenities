@@ -24,10 +24,13 @@ class App extends React.Component {
   }
 
   render() {
-    const overview = () => {
+    const loadingInfo = () => {
       if (this.state.currentListing !== null) {
         return (
-          <Overview listings={this.state.allListings} currentListing={this.state.currentListing}/>
+          <div>
+            <Overview listings={this.state.allListings} currentListing={this.state.currentListing} />
+            <Amenities currentListing={this.state.currentListing} />
+          </div>
         )
       } else {
         return (
@@ -43,8 +46,7 @@ class App extends React.Component {
           <a href="#reviews">Reviews</a>
           <a href="#rates_availability">Rates & Availability</a>
         </div>
-        {overview()}
-        <Amenities />
+        {loadingInfo()}
       </div>
     )
   }

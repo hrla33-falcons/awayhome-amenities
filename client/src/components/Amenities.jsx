@@ -3,14 +3,19 @@
 import React from 'react';
 import AmenityEntry from './AmenityEntry.jsx';
 
-const Amenities = () => {
+const Amenities = ({ currentListing }) => {
   return (
     <div>
-      <AmenityEntry />
-      <AmenityEntry />
-      <AmenityEntry />
-      <AmenityEntry />
-      <AmenityEntry />
+      <h2>Amenities</h2>
+      <div>
+        {
+          Object.keys(currentListing.amenities).map((key, index) => {
+            return (
+              <h3>{key}</h3>
+            )
+          })
+        }
+      </div>
     </div>
   )
 }
