@@ -103,8 +103,8 @@ const createListingDetails = () => {
   var tagCopy = tagHelper.slice(0);
   var minNights = randomNumber(1, 2)
 
+  listing.propertyType = propertyHelper[randomNumber(0, propertyHelper.length - 1)]
   listing.overview = {
-    "Property Type": propertyHelper[randomNumber(0, propertyHelper.length - 1)],
     "Sleeps": randomNumber(1, 10),
     "Bedrooms": randomNumber(1, 5),
     "Bathrooms": randomNumber(1, 5),

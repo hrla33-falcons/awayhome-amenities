@@ -6,8 +6,8 @@ connection.once('open', () => console.log("MongoDB connected successfully"));
 
 
 let listingDetailsSchema = mongoose.Schema({
+  propertyType: String, 
   overview: {
-    "Property Type": String,
     "Sleeps": Number,
     "Bedrooms": Number,
     "Bathrooms": Number,
