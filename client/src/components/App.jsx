@@ -46,7 +46,9 @@ class App extends React.Component {
           <a href="#reviews">Reviews</a>
           <a href="#rates_availability">Rates & Availability</a>
         </div>
-        {loadingInfo()}
+        <div id="listing_data">
+          {loadingInfo()}
+        </div>
       </div>
     )
   }
