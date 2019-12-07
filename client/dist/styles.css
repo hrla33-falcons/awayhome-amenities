@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   color: grey;
+  padding: 0px 100px;
 }
 
 h2 {
@@ -37,15 +38,25 @@ h4 {
   width: 50%;
 }
 
+#navbar {
+  background-color: white;
+  overflow: hidden;
+  /* position: fixed;
+  top: 0; */
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+}
+
 #navbar a {
   font-weight: 300;
   font-size: 16px;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   color: grey;
-  padding: 5px;
-  width: 18%;
+  padding: 12px 0px;
+  width: 10%;
   text-align: center;
+  float: left;
 }
 
 #navbar a:hover {
