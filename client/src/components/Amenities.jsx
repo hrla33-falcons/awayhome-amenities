@@ -8,7 +8,7 @@ const Amenities = ({ currentListing }) => {
   console.log(currentListing);
   return (
     <div>
-      <h2>Amenities</h2>
+      <h2 id="amenities">Amenities</h2>
       <div id="amenities_container">
         {
           Object.keys(currentListing.amenities).map((key, index) => {
