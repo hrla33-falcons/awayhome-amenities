@@ -49,5 +49,20 @@ let getAllListings = () => {
   })
 }
 
-module.exports.listingDetails = listingDetails;
-module.exports.getAllListings = getAllListings;
+let getOneListing = (id) => {
+  return new Promise((resolve, reject) => {
+    listingDetails.find({ listing_ID: id }, (err, docs) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(docs);
+      }
+    })
+  })
+}
+
+module.exports = {
+  listingDetails,
+  getAllListings,
+  getOneListing
+}
