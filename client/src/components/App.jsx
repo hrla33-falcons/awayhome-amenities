@@ -11,6 +11,7 @@ class App extends React.Component {
       allListings: [],
       currentListing: null
     }
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -21,6 +22,19 @@ class App extends React.Component {
           currentListing: data[0]
         })
       });
+  }
+
+  handleClick() {
+    var randomListingId = () => {
+      return Math.floor(Math.random() * (100)) + 1;
+    }
+    var id = randomListingId();
+    axios.get(`/listings/${id}`)
+      .then(({ data }) => {
+        this.setState({
+          currentListing: data[0]
+        })
+      })
   }
 
   render() {
@@ -40,6 +54,7 @@ class App extends React.Component {
     }
     return (
       <div>
+        <button onClick={this.handleClick}>Generate random listing</button>
         <div id='navbar'>
           <a href="#overview">Overview</a>
           <a href="#amenities">Amenities</a>
