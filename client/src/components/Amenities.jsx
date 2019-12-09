@@ -2,8 +2,10 @@
 // featured, safety features, location type, house rules, etc.
 import React from 'react';
 import AmenityEntries from './AmenityEntries.jsx';
+import HouseRules from './HouseRules.jsx'
 
 const Amenities = ({ currentListing }) => {
+  console.log(currentListing);
   return (
     <div>
       <h2>Amenities</h2>
@@ -18,6 +20,15 @@ const Amenities = ({ currentListing }) => {
             )
           })
         }
+      </div>
+      <div id="house_rules">
+        <HouseRules listing={currentListing} />
+        <div className="cancel_policy">
+          <h4>Cancellation Policy</h4>
+          <div className="cancel_text">
+            100% refund if canceled at least 60 days before arrival date. 50% refund if canceled at least 30 days before arrival date.
+          </div>
+        </div>
       </div>
     </div>
   )
