@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/awayhome-overview', { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/amenities-overview', { useUnifiedTopology: true, useNewUrlParser: true });
 
 const connection = mongoose.connection;
 connection.once('open', () => console.log("MongoDB connected successfully"));
 
 
 let listingDetailsSchema = mongoose.Schema({
+  listing_ID: Number,
   propertyType: String, 
   overview: {
     "Sleeps": Number,
@@ -25,7 +26,10 @@ let listingDetailsSchema = mongoose.Schema({
     "Outside": [String],
     "Pool/Spa": [String]
   },
-  houseRules: [String],
+  houseRules: {
+    rules: [String],
+    minAge: Number
+  },
   tags: [String],
   imageIcons: {}
 })
