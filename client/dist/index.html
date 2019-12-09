@@ -18,5 +18,21 @@
   <div>
     <div id='app'></div>
     <script src='bundle.js'></script>
+    <script>
+      const nav = document.querySelector('#app');
+      // const topOfNav = nav.offsetTop;
+
+      function fixNav() {
+        // console.log(nav.offsetTop, window.scrollY);
+        if (window.scrollY >= nav.offsetTop) {
+          document.body.style.scrollBehavior = 'smooth';
+          document.body.classList.add('fixed-nav');
+        } else {
+          document.body.classList.remove('fixed-nav');
+        }
+      }
+
+      window.addEventListener('scroll', fixNav);
+    </script>
   </div>
 </html>
