@@ -5,8 +5,8 @@ const HouseRules = ({ listing }) => {
     <div>
       <h4>House Rules</h4>
       <div className="check_time">
-        <span><b>Check-in: </b>3:00PM</span>
-        <span><b>Check-out: </b>10:00AM</span>
+        <span className="checkin"><b>Check-in: </b>3:00PM</span>
+        <span className="checkout"><b>Check-out: </b>10:00AM</span>
       </div>
       <div id="rules_container">
         <div id="rules">

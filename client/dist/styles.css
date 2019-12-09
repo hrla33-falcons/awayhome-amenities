@@ -70,9 +70,14 @@ h4 {
 }
 
 .check_time {
+  font-weight: 300;
   color: black;
   margin-top: 25px;
   margin-bottom: 23px;
+}
+
+.checkin {
+  padding-right: 50px;
 }
 
 .rule_note {
