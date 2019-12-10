@@ -117,8 +117,9 @@ h4 {
   border-bottom: 2px solid black;
 }
 
-.fixed-nav #navbar {
-  position: fixed;
+#navbar {
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
 }
 
