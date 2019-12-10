@@ -1,4 +1,4 @@
-# awayhome-amenities
+# overview-amenities
 The Overview, Amenities, and sticky nav bar module for AWayHome FEC
 
 1. Run npm install on this module's directory
