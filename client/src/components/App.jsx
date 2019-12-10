@@ -53,7 +53,7 @@ class App extends React.Component {
       }
     }
     return (
-      <div id="app_container">
+      <div>
         <div id='navbar'>
           <a href="#overview">Overview</a>
           <a href="#amenities">Amenities</a>
