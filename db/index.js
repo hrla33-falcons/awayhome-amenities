@@ -9,14 +9,29 @@ let listingDetailsSchema = mongoose.Schema({
   listing_ID: Number,
   propertyType: String, 
   overview: {
-    "Sleeps": Number,
-    "Bedrooms": Number,
-    "Bathrooms": Number,
-    "Half Baths": Number,
-    "Min Stay": String,
+    "Sleeps": {
+      icon: String,
+      data: Number
+    },
+    "Bedrooms": {
+      icon: String,
+      data: Number
+    },
+    "Bathrooms": {
+      icon: String,
+      data: Number
+    },
+    "Half Baths": {
+      icon: String,
+      data: Number
+    },
+    "Min Stay": {
+      icon: String,
+      data: String
+    },
   },
   amenities: {
-    "Featured": [String],
+    "Featured": [Object],
     "Safety Features": [String],
     "Location Type": [String],
     "General": [String],
@@ -30,8 +45,7 @@ let listingDetailsSchema = mongoose.Schema({
     rules: [String],
     minAge: Number
   },
-  tags: [String],
-  imageIcons: {}
+  tags: [String]
 })
 
 let listingDetails = mongoose.model('listingDetails', listingDetailsSchema);

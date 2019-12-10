@@ -1,20 +1,21 @@
 // dynamically render icons and numbers
 import React from 'react';
+import Icon from './Icon.jsx';
 
 const OverviewEntry = ({ listing }) => {
   return (
     <div id="overview_section">
       <div id="overview_entry">
-        <span>
-          <i class='fas fa-home'></i>
-        </span>
+        <Icon icon='fas fa-home' />
         {listing.propertyType}
       </div>
       {
         Object.keys(listing.overview).map((key, index) => {
+          console.log(key);
           return (
             <div id="overview_entry" key={index}>
-              {key}: {listing.overview[key]}
+              <Icon icon={ listing.overview[key].icon }/>
+              {key}: { listing.overview[key].data }
             </div>
           )
         })

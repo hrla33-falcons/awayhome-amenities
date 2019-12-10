@@ -5,19 +5,27 @@ import AmenityEntries from './AmenityEntries.jsx';
 import HouseRules from './HouseRules.jsx'
 
 const Amenities = ({ currentListing }) => {
-  console.log(currentListing);
   return (
     <div>
       <h2 id="amenities">Amenities</h2>
       <div id="amenities_container">
         {
           Object.keys(currentListing.amenities).map((key, index) => {
-            return (
-              <div id="subcat_container">
-                <h4>{key}</h4>
-                <AmenityEntries key={index} index={index} amenities={currentListing.amenities[key]}/>
-              </div>
-            )
+            if (key === "Featured") {
+              return (
+                <div id="subcat_container">
+                  <h4>{key}</h4>
+                  <AmenityEntries key={index} index={index} amenities={currentListing.amenities[key]}/>
+                </div>
+              )
+            } else {
+              return (
+                <div id="subcat_container">
+                  <h4>{key}</h4>
+                  <AmenityEntries key={index} index={index} amenities={currentListing.amenities[key]}/>
+                </div>
+              )
+            }
           })
         }
       </div>

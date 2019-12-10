@@ -20,8 +20,8 @@ const HouseRules = ({ listing }) => {
             })
           }
           <div className="rule_note">Minimum age of primary renter: {listing.houseRules.minAge}</div>
-          <div className="rule_note">Max guests: {`${listing.overview.Sleeps} (sleeps up to ${listing.overview.Sleeps} adults)`}</div>
-          <div className="rule_note">Maximum occupancy day or night is {listing.overview.Sleeps}.</div>
+          <div className="rule_note">Max guests: {`${listing.overview.Sleeps.data} (sleeps up to ${listing.overview.Sleeps.data} adults)`}</div>
+          <div className="rule_note">Maximum occupancy day or night is {listing.overview.Sleeps.data}.</div>
         </div>
       </div>
     </div>

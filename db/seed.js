@@ -4,7 +4,20 @@ const db = require('./index.js');
 
 const propertyHelper = ['Cabin', 'House', 'Condo/Apartment', 'Bungalow', 'Cottage', 'Studio', 'Villa', 'Resort']
 const amenitiesHelper = {
-  "Featured": ['Pets allowed', 'Children allowed', 'Internet', 'No Smoking', 'Washer & Dryer', 'Satellite/Cable', 'Fireplace', 'Heater', 'Swimming Pool', 'Parking', 'TV', 'Hot Tub', 'Air Conditioning'],
+  "Featured": [
+    { icon: 'fas fa-paw', data: 'Pets allowed' },
+    { icon: 'fas fa-baby-carriage', data: 'Children allowed' },
+    { icon: 'fas fa-wifi', data: 'Internet' },
+    { icon: 'fas fa-smoking-ban', data: 'No Smoking' },
+    { icon: 'fas fa-tshirt', data: 'Washer & Dryer' },
+    { icon: 'fas fa-satellite-dish', data: 'Satellite/Cable' },
+    { icon: 'fas fa-fire-alt', data: 'Fireplace' },
+    { icon: 'fas fa-temperature-high', data: 'Heater' },
+    { icon: 'fas fa-swimming-pool', data: 'Swimming Pool' },
+    { icon: 'fas fa-car', data: 'Parking' },
+    { icon: 'fas fa-tv', data: 'TV' },
+    { icon: 'fas fa-hot-tub', data: 'Hot Tub' },
+    { icon: 'fas fa-fan', data: 'Air Conditioning' }],
   "Safety Features": ['Smoke detector', 'Exterior lighting', 'Carbon-monoxide detector', 'Fire extinguisher', 'Deadbolt lock'],
   "Location Type": ['Beach View', 'Ocean View', 'Lakefront', 'Lake View', 'Mountain View', 'Downtown'],
   "General": ['Air Conditioning', 'Heating', 'Linens Provided', 'Washing Machine', 'Clothes Dryer',
@@ -45,7 +58,6 @@ const createAmenities = () => {
   }
   return listingAmenities
 }
-createAmenities();
 
 const createHouseRules = () => {
   // result house rules should be a max of 4
@@ -83,11 +95,11 @@ const createListingDetails = (listingID) => {
   listing.listing_ID = listingID;
   listing.propertyType = propertyHelper[randomNumber(0, propertyHelper.length - 1)]
   listing.overview = {
-    "Sleeps": randomNumber(1, 10),
-    "Bedrooms": randomNumber(1, 5),
-    "Bathrooms": randomNumber(1, 5),
-    "Half Baths": randomNumber(0, 3),
-    "Min Stay": minNights.toString() + '\u2013' + (minNights + 1).toString() + ' nights'
+    "Sleeps": { icon: 'fas fa-user-friends', data: randomNumber(1, 10) },
+    "Bedrooms": { icon: 'fas fa-door-open', data: randomNumber(1, 5) },
+    "Bathrooms": { icon: 'fas fa-bath', data: randomNumber(1, 5) },
+    "Half Baths": { icon: 'fas fa-toilet', data: randomNumber(0, 3) },
+    "Min Stay": { icon: 'fas fa-moon', data: minNights.toString() + '\u2013' + (minNights + 1).toString() + ' nights' }
   }
   // add a random amount of amenities
   listing.amenities = createAmenities();
@@ -103,8 +115,7 @@ const createListingDetails = (listingID) => {
     tagCopy.splice(randomIndex, 1);
     count++;
   }
-
-  console.log(listing);
+  
   return listing;
 }
 
