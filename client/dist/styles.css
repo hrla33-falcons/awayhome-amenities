@@ -2,6 +2,11 @@ button {
   margin-bottom: 50px;
 }
 
+i {
+  color: lightgrey;
+  padding: 5px;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: grey;

@@ -4,11 +4,18 @@ import React from 'react';
 const OverviewEntry = ({ listing }) => {
   return (
     <div id="overview_section">
-      <div id="overview_entry">{listing.propertyType}</div>
+      <div id="overview_entry">
+        <span>
+          <i class='fas fa-home'></i>
+        </span>
+        {listing.propertyType}
+      </div>
       {
         Object.keys(listing.overview).map((key, index) => {
           return (
-            <div id="overview_entry" key={index}>{key}: {listing.overview[key]}</div>
+            <div id="overview_entry" key={index}>
+              {key}: {listing.overview[key]}
+            </div>
           )
         })
       }
