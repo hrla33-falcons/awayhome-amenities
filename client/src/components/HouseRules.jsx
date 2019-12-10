@@ -1,6 +1,23 @@
 import React from 'react';
+import Icon from './Icon.jsx';
 
 const HouseRules = ({ listing }) => {
+  const negOrPosIcon = (rule) => {
+    if (rule.includes('No')) {
+      return 'fas fa-times';
+    } else {
+      return 'fas fa-check';
+    }
+  }
+
+  const negOrPosColor = (rule) => {
+    if (negOrPosIcon(rule)) {
+      return "red";
+    } else {
+      return "green";
+    }
+  }
+
   return (
     <div>
       <h4>House Rules</h4>
@@ -14,6 +31,9 @@ const HouseRules = ({ listing }) => {
             listing.houseRules.rules.map((rule, index) => {
               return (
                 <div className="rule" key={index}>
+                  <span style={{color: "red"}}>
+                    <i className={negOrPosIcon(rule)}></i>
+                  </span>
                   {rule}
                 </div>
               )

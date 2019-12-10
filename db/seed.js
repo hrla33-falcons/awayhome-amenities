@@ -64,6 +64,7 @@ const createHouseRules = () => {
   // add 0 - 3 negative house rules
   // add however many left of positive house rules
   var result = {};
+  
   // negative rules
   result.rules = [];
   for (var i = 0; i < randomNumber(1, 3); i++) {
@@ -72,6 +73,8 @@ const createHouseRules = () => {
       result.rules.push(houseRulesHelper.negative[randomIndex]);
     }
   }
+
+  // positive rules
   if (!result.rules.includes('No pets')) {
     result.rules.push('Pets allowed');
   } else if (!result.rules.includes('No children')) {
