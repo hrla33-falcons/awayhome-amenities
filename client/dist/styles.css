@@ -8,15 +8,17 @@ button {
   font-size: 20px;
 }
 
-.fas.fa-check {
-  color: green;
+.fa-check {
+  color: rgb(0, 194, 0);
+  padding-right: 4px;
 }
 
-.fas.fa-times {
-  color: red;
+.fa-times {
+  color: rgb(219, 1, 1);
+  padding-right: 10px;
 }
 
-body {
+#app {
   font-family: 'Open Sans', sans-serif;
   color: grey;
   margin: 0;
@@ -64,8 +66,6 @@ h4 {
 #house_rules {
   padding: 15px;
 }
-
-
 
 #rules_container {
   padding: 0px 20px;
