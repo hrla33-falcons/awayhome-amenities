@@ -7,6 +7,14 @@ button {
   padding: 8px;
 }
 
+.fas.fa-check {
+  color: green;
+}
+
+.fas.fa-times {
+  color: red;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: grey;

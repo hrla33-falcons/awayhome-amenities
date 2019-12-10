@@ -29,9 +29,10 @@ const HouseRules = ({ listing }) => {
         <div id="rules">
           {
             listing.houseRules.rules.map((rule, index) => {
+              // var iconColor = negOrPosColor(rule);
               return (
                 <div className="rule" key={index}>
-                  <span style={{color: "red"}}>
+                  <span style={{fontSize: '18px', paddingRight: '8px'}}>
                     <i className={negOrPosIcon(rule)}></i>
                   </span>
                   {rule}
