@@ -54,7 +54,6 @@ class App extends React.Component {
     }
     return (
       <div>
-        <button onClick={this.handleClick}>Generate random listing</button>
         <div id='navbar'>
           <a href="#overview">Overview</a>
           <a href="#amenities">Amenities</a>
@@ -63,6 +62,9 @@ class App extends React.Component {
         </div>
         <div id="listing_data">
           {loadingInfo()}
+        </div>
+        <div>
+          <button onClick={this.handleClick}>Generate random listing</button>
         </div>
       </div>
     )
