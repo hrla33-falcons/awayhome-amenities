@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/listings')
+    axios.get('http://localhost:3001/listings')
       .then(({ data }) => {
         this.setState({
           allListings: data,
@@ -29,7 +29,7 @@ class App extends React.Component {
       return Math.floor(Math.random() * (100)) + 1;
     }
     var id = randomListingId();
-    axios.get(`/listings/${id}`)
+    axios.get(`http://localhost:3001/listings/${id}`)
       .then(({ data }) => {
         this.setState({
           currentListing: data[0]

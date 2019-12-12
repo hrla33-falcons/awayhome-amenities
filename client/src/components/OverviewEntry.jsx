@@ -11,10 +11,9 @@ const OverviewEntry = ({ listing }) => {
       </div>
       {
         Object.keys(listing.overview).map((key, index) => {
-          console.log(key);
           return (
             <div id="overview_entry" key={index}>
-              <Icon icon={ listing.overview[key].icon }/>
+              <Icon icon={listing.overview[key].icon} />
               {key}: { listing.overview[key].data }
             </div>
           )

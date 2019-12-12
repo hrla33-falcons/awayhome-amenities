@@ -14,12 +14,12 @@ app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 app.listen(port, () => console.log(`Connected to port ${port}`));
 
-app.get('/listings', (req, res) => {
+app.get('http://localhost:3001/listings', (req, res) => {
   getAllListings()
     .then((docs) => res.status(200).send(docs));
 })
 
-app.get('/listings/:id', ({ params }, res) => {
+app.get('http://localhost:3001/listings/:id', ({ params }, res) => {
   getOneListing(params.id)
     .then((docs) => res.status(200).send(docs));
 })

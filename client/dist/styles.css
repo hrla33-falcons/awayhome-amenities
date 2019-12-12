@@ -107,11 +107,12 @@ h4 {
 #navbar {
   background-color: white;
   overflow: hidden;
-  /* position: fixed;
-  top: 0; */
   width: 100%;
   border-bottom: 1px solid lightgrey;
   padding-left: 80px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 #navbar a {
@@ -129,12 +130,6 @@ h4 {
 #navbar a:hover {
   color: black;
   border-bottom: 2px solid black;
-}
-
-#navbar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
 
 #tag {
