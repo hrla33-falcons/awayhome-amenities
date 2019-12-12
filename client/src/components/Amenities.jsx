@@ -13,14 +13,14 @@ const Amenities = ({ currentListing }) => {
           Object.keys(currentListing.amenities).map((key, index) => {
             if (key === "Featured") {
               return (
-                <div id="subcat_container">
+                <div key={index} id="subcat_container">
                   <h4>{key}</h4>
                   <AmenityEntries key={index} index={index} amenities={currentListing.amenities[key]}/>
                 </div>
               )
             } else {
               return (
-                <div id="subcat_container">
+                <div key={index} id="subcat_container">
                   <h4>{key}</h4>
                   <AmenityEntries key={index} index={index} amenities={currentListing.amenities[key]}/>
                 </div>
