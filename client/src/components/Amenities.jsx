@@ -7,8 +7,8 @@ import HouseRules from './HouseRules.jsx'
 const Amenities = ({ currentListing }) => {
   return (
     <div>
-      <div className="amenities_container">
-      <h2 className="amenities">Amenities</h2>
+      <div id="amenities">
+      <h2>Amenities</h2>
         {
           Object.keys(currentListing.amenities).map((key, index) => {
             if (key === "Featured") {

@@ -41,7 +41,7 @@ h4 {
   margin-bottom: 10px;
 }
 
-.amenities_container {
+#amenities {
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,7 @@ h4 {
   margin: 10px;
 }
 
-.overview_container {
+#overview {
   display: flex;
   flex-direction: column;
   align-items: left;

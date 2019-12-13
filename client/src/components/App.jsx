@@ -42,9 +42,9 @@ class App extends React.Component {
       <div>
         <div className='navbar'>
           <div className='navbar_selections'>
-            <a href=".overview_container">Overview</a>
-            <a href=".amenities_container">Amenities</a>
-            <a href=".reviews">Reviews</a>
+            <a href="#overview">Overview</a>
+            <a href="#amenities">Amenities</a>
+            <a href="#reviews">Reviews</a>
             {/* <a href="#rates_availability">Rates & Availability</a> */}
           </div>
         </div>
