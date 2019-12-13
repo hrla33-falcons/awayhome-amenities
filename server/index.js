@@ -17,12 +17,6 @@ app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 app.listen(port, () => console.log(`Connected to port ${port}`));
 
-// handle API calls
-app.get('/listings', (req, res) => {
-  getAllListings()
-    .then((docs) => res.status(200).send(docs));
-})
-
 app.get('/listings/:id', ({ params }, res) => {
   getOneListing(params.id)
     .then((docs) => res.status(200).send(docs));

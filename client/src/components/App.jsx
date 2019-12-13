@@ -10,18 +10,20 @@ class App extends React.Component {
     this.state = {
       currentListing: null
     }
+    this.randomListingId = this.randomListingId.bind(this);
   }
 
-  randomListing() {
-    // pick a random listing id between 1 - 100
-    return Math.floor(Math.random() * 100) + 1;
+  randomListingId() {
+    return Math.floor(Math.random() * (100)) + 1;
   }
 
   componentDidMount() {
-    axios.get('listings/')
+    var id = this.randomListingId();
+    console.log(id);
+    axios.get(`/listings/${id}`)
       .then(({ data }) => {
         this.setState({
-          currentListing: data
+          currentListing: data[0]
         })
       });
   }
@@ -31,7 +33,7 @@ class App extends React.Component {
       if (this.state.currentListing !== null) {
         return (
           <div>
-            <Overview listings={this.state.allListings} currentListing={this.state.currentListing} />
+            <Overview currentListing={this.state.currentListing} />
             <Amenities currentListing={this.state.currentListing} />
           </div>
         )
