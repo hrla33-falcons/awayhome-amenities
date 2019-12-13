@@ -8,17 +8,20 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allListings: [],
       currentListing: null
     }
   }
 
+  randomListing() {
+    // pick a random listing id between 1 - 100
+    return Math.floor(Math.random() * 100) + 1;
+  }
+
   componentDidMount() {
-    axios.get('http://localhost:3001/listings')
+    axios.get('listings/')
       .then(({ data }) => {
         this.setState({
-          allListings: data,
-          currentListing: data[0]
+          currentListing: data
         })
       });
   }
