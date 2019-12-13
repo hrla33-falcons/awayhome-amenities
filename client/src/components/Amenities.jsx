@@ -8,26 +8,17 @@ const Amenities = ({ currentListing }) => {
   return (
     <div>
       <div id="amenities">
-      <h2>Amenities</h2>
-        {
-          Object.keys(currentListing.amenities).map((key, index) => {
-            if (key === "Featured") {
+        <h2>Amenities</h2>
+          {
+            Object.keys(currentListing.amenities).map((key, index) => {
               return (
                 <div key={index} className="subcat_container">
                   <h4>{key}</h4>
                   <AmenityEntries key={index} index={index} amenities={currentListing.amenities[key]}/>
                 </div>
               )
-            } else {
-              return (
-                <div key={index} className="subcat_container">
-                  <h4>{key}</h4>
-                  <AmenityEntries key={index} index={index} amenities={currentListing.amenities[key]}/>
-                </div>
-              )
-            }
-          })
-        }
+            })
+          }
       </div>
       <div className="house_rules">
         <HouseRules listing={currentListing} />
