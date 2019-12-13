@@ -1,6 +1,6 @@
 // dynamically renders a type of subsection
 import React from 'react';
-import Icon from './Icon.jsx';
+import AmenityColumn from './AmenityColumn.jsx';
 
 const AmenityEntries = ({ amenities }) => {
   // check length of amenities arr
@@ -13,57 +13,15 @@ const AmenityEntries = ({ amenities }) => {
   if (typeof amenities[0] === 'object') {
     return (
       <div>
-        <div className="column">
-        {
-          colOne.map((amenity, index) => {
-            return (
-              <div key={index} id="amenity_entry">
-                <Icon icon={amenity.icon}/>
-                {amenity.data}
-              </div>
-            )
-          })
-        }
-        </div>
-        <div className="column">
-          {
-            colTwo.map((amenity, index) => {
-              return (
-                <div key={index} id="amenity_entry">
-                  <Icon icon={amenity.icon}/>
-                  {amenity.data}
-                </div>
-              )
-            })
-          }
-        </div>
+        <AmenityColumn column={colOne} hasIcon={true} />
+        <AmenityColumn column={colTwo} hasIcon={true} />
       </div>
     )
   } else {
     return (
       <div>
-        <div className="column">
-        {
-          colOne.map((amenity, index) => {
-            return (
-              <div key={index} id="amenity_entry">
-                {amenity}
-              </div>
-            )
-          })
-        }
-        </div>
-        <div className="column">
-          {
-            colTwo.map((amenity, index) => {
-              return (
-                <div key={index} id="amenity_entry">
-                  {amenity}
-                </div>
-              )
-            })
-          }
-        </div>
+        <AmenityColumn column={colOne} hasIcon={false} />
+        <AmenityColumn column={colTwo} hasIcon={false} />
       </div>
     )
   }
