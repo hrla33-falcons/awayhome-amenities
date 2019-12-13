@@ -19,7 +19,6 @@ class App extends React.Component {
 
   componentDidMount() {
     var id = this.randomListingId();
-    console.log(id);
     axios.get(`/listings/${id}`)
       .then(({ data }) => {
         this.setState({
