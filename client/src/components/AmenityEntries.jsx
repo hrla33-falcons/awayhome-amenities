@@ -17,7 +17,7 @@ const AmenityEntries = ({ amenities }) => {
         {
           colOne.map((amenity, index) => {
             return (
-              <div key={index} id="amenity_entry">
+              <div key={index} className="amenity_entry">
                 <Icon icon={amenity.icon}/>
                 {amenity.data}
               </div>
@@ -29,7 +29,7 @@ const AmenityEntries = ({ amenities }) => {
           {
             colTwo.map((amenity, index) => {
               return (
-                <div key={index} id="amenity_entry">
+                <div key={index} className="amenity_entry">
                   <Icon icon={amenity.icon}/>
                   {amenity.data}
                 </div>
@@ -46,7 +46,7 @@ const AmenityEntries = ({ amenities }) => {
         {
           colOne.map((amenity, index) => {
             return (
-              <div key={index} id="amenity_entry">
+              <div key={index} className="amenity_entry">
                 {amenity}
               </div>
             )
@@ -57,7 +57,7 @@ const AmenityEntries = ({ amenities }) => {
           {
             colTwo.map((amenity, index) => {
               return (
-                <div key={index} id="amenity_entry">
+                <div key={index} className="amenity_entry">
                   {amenity}
                 </div>
               )
