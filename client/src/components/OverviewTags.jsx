@@ -2,11 +2,11 @@ import React from 'react';
 
 const OverviewTags = ({ listing }) => {
   return (
-    <div id="tag_section">
+    <div className="tag_section">
       {
         listing.tags.map((tag, index) => {
           return (
-            <span id="tag" key={index}>
+            <span className="tag" key={index}>
               {tag}
             </span>
           )
