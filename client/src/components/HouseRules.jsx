@@ -10,14 +10,6 @@ const HouseRules = ({ listing }) => {
     }
   }
 
-  const negOrPosColor = (rule) => {
-    if (negOrPosIcon(rule)) {
-      return "red";
-    } else {
-      return "green";
-    }
-  }
-
   return (
     <div>
       <h4>House Rules</h4>
@@ -25,8 +17,8 @@ const HouseRules = ({ listing }) => {
         <span className="checkin"><b>Check-in: </b>3:00PM</span>
         <span className="checkout"><b>Check-out: </b>10:00AM</span>
       </div>
-      <div id="rules_container">
-        <div id="rules">
+      <div className="rules_container">
+        <div className="rules">
           {
             listing.houseRules.rules.map((rule, index) => {
               // var iconColor = negOrPosColor(rule);

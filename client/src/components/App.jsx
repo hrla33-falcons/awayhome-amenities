@@ -44,11 +44,13 @@ class App extends React.Component {
     }
     return (
       <div>
-        <div id='navbar'>
-          <a href="#overview">Overview</a>
-          <a href="#amenities">Amenities</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#rates_availability">Rates & Availability</a>
+        <div className='navbar'>
+          <div className='navbar_selections'>
+            <a href="#overview">Overview</a>
+            <a href="#amenities">Amenities</a>
+            <a href="#reviews">Reviews</a>
+            {/* <a href="#rates_availability">Rates & Availability</a> */}
+          </div>
         </div>
         <div id="listing_data">
           {loadingInfo()}

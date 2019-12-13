@@ -2,7 +2,7 @@ import React from 'react';
 
 const Icon = ({ icon }) => {
   return (
-    <span id="icon">
+    <span className="icon">
       <i className={icon}></i>
     </span>
   )

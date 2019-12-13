@@ -2,7 +2,7 @@ button {
   margin-bottom: 50px;
 }
 
-#icon {
+.icon {
   color: #757575;
   padding: 8px;
   font-size: 20px;
@@ -41,13 +41,13 @@ h4 {
   margin-bottom: 10px;
 }
 
-#amenities_container {
+.amenities_container {
   margin: 20px;
   display: flex;
   flex-direction: column;
 }
 
-#subcat_container {
+.subcat_container {
   border-bottom: 1px solid lightgrey;
   padding-bottom: 20px;
   display: flex;
@@ -55,28 +55,24 @@ h4 {
   width: 100%;
 }
 
-#amenity_entry {
+.amenity_entry {
   font-weight: 300;
   padding: 6px;
   margin: 10px;
 }
 
-#overview_container {
+.overview_container {
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: left;
 }
 
-#overview_section {
+.overview_section {
   width: 50%;
 }
 
-/* .icon_container {
-  color: red;
-} */
-
-#overview_entry {
+.overview_entry {
   display: flex;
   font-size: 15px;
   align-items: center;
@@ -87,11 +83,11 @@ h4 {
   width: 50%;
 }
 
-#house_rules {
+.house_rules {
   padding: 15px;
 }
 
-#rules_container {
+.rules_container {
   padding: 0px 20px;
   margin: 10px 0px;
   background-color: #f5f4f3;
@@ -106,7 +102,7 @@ h4 {
   margin: 12px;
 }
 
-#rules {
+.rules {
   padding-top: 10px;
   padding-bottom: 15px;
 }
@@ -128,18 +124,21 @@ h4 {
   padding: 10px;
 }
 
-#navbar {
+.navbar {
   background-color: white;
   overflow: hidden;
   width: 100%;
   border-bottom: 1px solid lightgrey;
-  padding-left: 80px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-#navbar a {
+.navbar_selections {
+  padding-left: 3%;
+}
+
+.navbar a {
   font-weight: 300;
   font-size: 16px;
   text-decoration: none;
@@ -151,12 +150,12 @@ h4 {
   float: left;
 }
 
-#navbar a:hover {
+.navbar a:hover {
   color: black;
   border-bottom: 2px solid black;
 }
 
-#tag {
+.tag {
   font-weight: 600;
   font-size: 11px;
   background-color: #f5f4f3;
@@ -165,7 +164,7 @@ h4 {
   border-radius: 2px;
 }
 
-#tag_section {
+.tag_section {
   padding-top: 15px;
   padding-bottom: 17px;
   border-top: 1px solid lightgrey;

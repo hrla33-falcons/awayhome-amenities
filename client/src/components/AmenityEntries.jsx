@@ -13,15 +13,67 @@ const AmenityEntries = ({ amenities }) => {
   if (typeof amenities[0] === 'object') {
     return (
       <div>
+<<<<<<< HEAD
         <AmenityColumn column={colOne} hasIcon={true} />
         <AmenityColumn column={colTwo} hasIcon={true} />
+=======
+        <div className="column">
+        {
+          colOne.map((amenity, index) => {
+            return (
+              <div key={index} className="amenity_entry">
+                <Icon icon={amenity.icon}/>
+                {amenity.data}
+              </div>
+            )
+          })
+        }
+        </div>
+        <div className="column">
+          {
+            colTwo.map((amenity, index) => {
+              return (
+                <div key={index} className="amenity_entry">
+                  <Icon icon={amenity.icon}/>
+                  {amenity.data}
+                </div>
+              )
+            })
+          }
+        </div>
+>>>>>>> master
       </div>
     )
   } else {
     return (
       <div>
+<<<<<<< HEAD
         <AmenityColumn column={colOne} hasIcon={false} />
         <AmenityColumn column={colTwo} hasIcon={false} />
+=======
+        <div className="column">
+        {
+          colOne.map((amenity, index) => {
+            return (
+              <div key={index} className="amenity_entry">
+                {amenity}
+              </div>
+            )
+          })
+        }
+        </div>
+        <div className="column">
+          {
+            colTwo.map((amenity, index) => {
+              return (
+                <div key={index} className="amenity_entry">
+                  {amenity}
+                </div>
+              )
+            })
+          }
+        </div>
+>>>>>>> master
       </div>
     )
   }

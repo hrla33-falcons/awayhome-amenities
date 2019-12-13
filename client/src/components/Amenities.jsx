@@ -7,20 +7,20 @@ import HouseRules from './HouseRules.jsx'
 const Amenities = ({ currentListing }) => {
   return (
     <div>
-      <h2 id="amenities">Amenities</h2>
-      <div id="amenities_container">
+      <div id="amenities">
+      <h2>Amenities</h2>
         {
           Object.keys(currentListing.amenities).map((key, index) => {
             if (key === "Featured") {
               return (
-                <div key={index} id="subcat_container">
+                <div key={index} className="subcat_container">
                   <h4>{key}</h4>
                   <AmenityEntries key={index} index={index} amenities={currentListing.amenities[key]}/>
                 </div>
               )
             } else {
               return (
-                <div key={index} id="subcat_container">
+                <div key={index} className="subcat_container">
                   <h4>{key}</h4>
                   <AmenityEntries key={index} index={index} amenities={currentListing.amenities[key]}/>
                 </div>
@@ -29,7 +29,7 @@ const Amenities = ({ currentListing }) => {
           })
         }
       </div>
-      <div id="house_rules">
+      <div className="house_rules">
         <HouseRules listing={currentListing} />
         <div className="cancel_policy">
           <h4>Cancellation Policy</h4>
