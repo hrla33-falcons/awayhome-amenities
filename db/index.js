@@ -50,19 +50,6 @@ let listingDetailsSchema = mongoose.Schema({
 
 let listingDetails = mongoose.model('listingDetails', listingDetailsSchema);
 
-let getAllListings = () => {
-  // get all listings stored in the database
-  return new Promise((resolve, reject) => {
-    listingDetails.find({}, (err, docs) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(docs);
-      }
-    })
-  })
-}
-
 let getOneListing = (id) => {
   return new Promise((resolve, reject) => {
     listingDetails.find({ listing_ID: id }, (err, docs) => {
@@ -77,6 +64,5 @@ let getOneListing = (id) => {
 
 module.exports = {
   listingDetails,
-  getAllListings,
   getOneListing
 }

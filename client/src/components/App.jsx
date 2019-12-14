@@ -22,6 +22,10 @@ class App extends React.Component {
     axios.get(`/listings/${id}`)
       .then(({ data }) => {
         this.setState({
+          // NOTE: if you're viewing this file in the proxy,
+          // this state should be set to currentListing: data
+          // NOT currentListing: data[0] <-- this only works when operating
+          // this module independent of the proxy
           currentListing: data[0]
         })
       });
@@ -48,7 +52,7 @@ class App extends React.Component {
           <div className='navbar_selections'>
             <a href="#overview">Overview</a>
             <a href="#amenities">Amenities</a>
-            <a href="#reviews">Reviews</a>
+            <a href="#mg_root">Reviews</a>
             {/* <a href="#rates_availability">Rates & Availability</a> */}
           </div>
         </div>

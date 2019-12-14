@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const getAllListings = require('../db').getAllListings;
 const getOneListing = require('../db').getOneListing;
 const cors = require('cors');
 
