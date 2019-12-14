@@ -53,7 +53,6 @@ class App extends React.Component {
             <a href="#overview">Overview</a>
             <a href="#amenities">Amenities</a>
             <a href="#mg_root">Reviews</a>
-            {/* <a href="#rates_availability">Rates & Availability</a> */}
           </div>
         </div>
         <div id="listing_data">
