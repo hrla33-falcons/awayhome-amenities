@@ -16,7 +16,7 @@ app.use('/', express.static(path.join(__dirname, '../client/dist')));
 
 app.listen(port, () => console.log(`Connected to port ${port}`));
 
-app.get('/listings/:id', ({ params }, res) => {
+app.get('/amenities/:id', ({ params }, res) => {
   getOneListing(params.id)
     .then((docs) => res.status(200).send(docs));
 })
