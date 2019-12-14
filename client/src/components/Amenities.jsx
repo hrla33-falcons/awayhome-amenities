@@ -7,7 +7,7 @@ import HouseRules from './HouseRules.jsx'
 const Amenities = ({ currentListing }) => {
   return (
     <div>
-      <div id="amenities">
+      <div>
         <h2>Amenities</h2>
           {
             Object.keys(currentListing.amenities).map((key, index) => {

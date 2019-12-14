@@ -132,6 +132,7 @@ h4 {
 
 .navbar_selections {
   padding-left: 3%;
+  cursor: pointer;
 }
 
 .navbar a {

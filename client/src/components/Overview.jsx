@@ -5,7 +5,7 @@ import OverviewTags from './OverviewTags.jsx';
 
 const Overview = (props) => {
   return (
-    <div id="overview">
+    <div>
       <h2>Overview</h2>
       <div>
         <OverviewEntry listing={props.currentListing} />
