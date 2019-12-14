@@ -18,5 +18,9 @@ app.listen(port, () => console.log(`Connected to port ${port}`));
 
 app.get('/amenities/:id', ({ params }, res) => {
   getOneListing(params.id)
-    .then((docs) => res.status(200).send(docs));
+    .then((docs) => res.status(200).send(docs))
+    .catch((err) => {
+      console.log(err);
+      res.status(404).send('Couldn\'t get listin details');
+    })
 })

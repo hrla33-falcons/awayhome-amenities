@@ -28,7 +28,8 @@ class App extends React.Component {
           // this module independent of the proxy
           currentListing: data[0]
         })
-      });
+      })
+      .catch((err) => console.log(err));
   }
 
   render() {
