@@ -3,6 +3,7 @@ import React from 'react';
 import axios from 'axios';
 import Overview from './Overview.jsx';
 import Amenities from './Amenities.jsx';
+import OverviewNav from './OverviewNav.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,39 +12,11 @@ class App extends React.Component {
       currentListing: null
     }
 
-    this.amenitiesDiv = React.createRef();
-    this.overviewDiv = React.createRef();
-    this.reviewsDiv = React.createRef();
-
     this.randomListingId = this.randomListingId.bind(this);
-    this.navToAmenities = this.navToAmenities.bind(this);
-    this.navToOverview = this.navToOverview.bind(this);
-    this.navToReviews = this.navToReviews.bind(this);
   }
 
   randomListingId() {
     return Math.floor(Math.random() * (100)) + 1;
-  }
-
-  navToAmenities() {
-    this.amenitiesDiv.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest'
-    })
-  }
-
-  navToOverview() {
-    this.overviewDiv.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest'
-    })
-  }
-
-  navToReviews() {
-    this.reviewsDiv.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest'
-    })
   }
 
   componentDidMount() {
@@ -66,10 +39,10 @@ class App extends React.Component {
       if (this.state.currentListing !== null) {
         return (
           <div>
-            <div id="overview" ref={this.overviewDiv}>
+            <div id="overview">
               <Overview currentListing={this.state.currentListing} />
             </div>
-            <div id="amenities" ref={this.amenitiesDiv}>
+            <div id="amenities">
               <Amenities currentListing={this.state.currentListing} />
             </div>
           </div>
@@ -82,13 +55,6 @@ class App extends React.Component {
     }
     return (
       <div>
-        <div className='navbar'>
-          <div className='navbar_selections'>
-            <a onClick={this.navToOverview} name="overviewDiv">Overview</a>
-            <a onClick={this.navToAmenities} name="amenitiesDiv">Amenities</a>
-            <a onClick={this.navToReviews} name="reviewsDiv">Reviews</a>
-          </div>
-        </div>
         <div id="listing_data">
           {loadingInfo()}
         </div>
