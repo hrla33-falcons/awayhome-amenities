@@ -65,7 +65,8 @@ h4 {
 }
 
 .overview_section {
-  width: 50%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .overview_entry {

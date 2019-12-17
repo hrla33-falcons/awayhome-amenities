@@ -14,8 +14,7 @@
   padding-right: 10px;
 }
 
-#kat-service,
-#overview-sticky-nav {
+#kat-service {
   font-family: 'Open Sans', sans-serif;
   color: grey;
   margin: 0;
@@ -66,7 +65,8 @@ h4 {
 }
 
 .overview_section {
-  width: 50%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .overview_entry {

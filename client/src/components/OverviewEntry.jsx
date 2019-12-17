@@ -4,7 +4,7 @@ import Icon from './Icon.jsx';
 
 const OverviewEntry = ({ listing }) => {
   return (
-    <div className="overview_section">
+    <div>
       <div className="overview_entry">
           <Icon icon='fas fa-home' />
           {listing.propertyType}
